@@ -32,8 +32,8 @@ const ResTopNavbar = ({ data }: { data: NavMenu }) => {
           className="max-w-[22px] max-h-[22px]"
         />
       </SheetTrigger>
-      <SheetContent side="left" className="overflow-y-auto">
-        <SheetHeader className="mb-10">
+      <SheetContent side="left" className="overflow-y-auto p-4">
+        <SheetHeader className="mb-6">
           <SheetTitle asChild>
             <SheetClose asChild>
               <Link href="/" className={cn([integralCF.className, "text-2xl"])}>
@@ -47,7 +47,9 @@ const ResTopNavbar = ({ data }: { data: NavMenu }) => {
             <React.Fragment key={item.id}>
               {item.type === "MenuItem" && (
                 <SheetClose asChild>
-                  <Link href={item.url ?? "/"} className="mb-4">
+                  <Link
+                    href={item.url ?? "/"}
+                    className="mb-4 text-lg font-medium text-gray-800 hover:text-gray-600">
                     {item.label}
                   </Link>
                 </SheetClose>
@@ -56,16 +58,15 @@ const ResTopNavbar = ({ data }: { data: NavMenu }) => {
                 <div className="mb-4 w-full">
                   <Accordion type="single" collapsible>
                     <AccordionItem value={item.label} className="border-none">
-                      <AccordionTrigger className="text-left p-0 py-0.5 font-normal text-base">
+                      <AccordionTrigger className="text-left py-2 font-normal text-lg text-gray-800">
                         {item.label}
                       </AccordionTrigger>
-                      <AccordionContent className="p-4 pb-0 border-l flex flex-col">
-                        {item.children.map((itemChild, idx) => (
+                      <AccordionContent className="p-0 pb-4">
+                        {item.children.map((itemChild) => (
                           <SheetClose
                             key={itemChild.id}
                             asChild
-                            className="w-fit py-2 text-base"
-                          >
+                            className="w-full py-2 text-base text-gray-600 hover:text-gray-800">
                             <Link href={itemChild.url ?? "/"}>
                               {itemChild.label}
                             </Link>

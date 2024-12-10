@@ -12,12 +12,11 @@ const NewsLetterSection = () => {
         className={cn([
           integralCF.className,
           "font-bold text-[32px] md:text-[40px] text-white mb-9 md:mb-0",
-        ])}
-      >
+        ])}>
         STAY UP TO DATE ABOUT OUR LATEST OFFERS
       </p>
-      <div className="flex items-center">
-        <div className="flex flex-col max-w-[349px] mx-auto">
+      <div className="flex items-center justify-center">
+        <div className="flex flex-col max-w-[349px] w-full mx-auto">
           <InputGroup className="flex bg-white mb-[14px]">
             <InputGroup.Text>
               <Image
@@ -40,8 +39,7 @@ const NewsLetterSection = () => {
             variant="secondary"
             className="text-sm sm:text-base font-medium bg-white h-12 rounded-full px-4 py-3"
             aria-label="Subscribe to Newsletter"
-            type="button"
-          >
+            type="button">
             Subscribe to Newsletter
           </Button>
         </div>

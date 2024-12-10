@@ -27,7 +27,7 @@ const colorsData: Color[] = [
 
 const ColorSelection = () => {
   const { colorSelection } = useAppSelector(
-    (state: RootState) => state.products
+    (state: RootState) => state.products,
   );
   const dispatch = useAppDispatch();
 
@@ -43,12 +43,12 @@ const ColorSelection = () => {
             type="button"
             className={cn([
               color.code,
-              "rounded-full w-9 sm:w-10 h-9 sm:h-10 flex items-center justify-center",
+              "rounded-full w-9 sm:w-10 h-9 sm:h-10 flex items-center justify-center relative",
+              colorSelection.name === color.name && "border-2 border-white", // Add border on selection instead of ring
             ])}
-            onClick={() => dispatch(setColorSelection(color))}
-          >
+            onClick={() => dispatch(setColorSelection(color))}>
             {colorSelection.name === color.name && (
-              <IoMdCheckmark className="text-base text-white" />
+              <IoMdCheckmark className="text-base text-white absolute" />
             )}
           </button>
         ))}

@@ -16,8 +16,7 @@ const PhotoSection = ({ data }: { data: Product }) => {
               key={index}
               type="button"
               className="bg-[#F0EEED] rounded-[13px] xl:rounded-[20px] w-full max-w-[111px] xl:max-w-[152px] max-h-[106px] xl:max-h-[167px] xl:min-h-[167px] aspect-square overflow-hidden"
-              onClick={() => setSelected(photo)}
-            >
+              onClick={() => setSelected(photo)}>
               <Image
                 src={photo}
                 width={152}

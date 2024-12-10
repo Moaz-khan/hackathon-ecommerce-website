@@ -1,3 +1,5 @@
+"use client";
+
 import { cn } from "@/lib/utils";
 import { integralCF } from "@/styles/fonts";
 import Link from "next/link";
@@ -42,7 +44,7 @@ const data: NavMenu = [
         id: 14,
         label: "Bags and Shoes",
         url: "/shop#bag-shoes",
-        description: "Suitable for men, women and all tastes and styles",
+        description: "Suitable for men, women, and all tastes and styles",
       },
     ],
   },
@@ -82,8 +84,7 @@ const TopNavbar = () => {
             className={cn([
               integralCF.className,
               "text-2xl lg:text-[32px] mb-2 mr-3 lg:mr-10",
-            ])}
-          >
+            ])}>
             SHOP.CO
           </Link>
         </div>

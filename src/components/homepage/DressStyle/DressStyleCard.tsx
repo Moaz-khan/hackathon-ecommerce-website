@@ -1,25 +1,24 @@
-import { cn } from "@/lib/utils";
 import Link from "next/link";
 import React from "react";
+import { cn } from "@/lib/utils";
 
-type DressStyleCardProps = {
-  title: string;
-  url: string;
-  className?: string;
+type CardProps = {
+  heading: string;
+  link: string;
+  customClass?: string;
 };
 
-const DressStyleCard = ({ title, url, className }: DressStyleCardProps) => {
+const StyleCard = ({ heading, link, customClass }: CardProps) => {
   return (
     <Link
-      href={url}
-      className={cn([
-        "w-full md:h-full rounded-[20px] bg-white bg-top text-2xl md:text-4xl font-bold text-left py-4 md:py-[25px] px-6 md:px-9 bg-no-repeat bg-cover",
-        className,
-      ])}
-    >
-      {title}
+      href={link}
+      className={cn(
+        "block w-full rounded-lg bg-white bg-top text-xl md:text-3xl font-semibold text-left py-5 md:py-7 px-6 md:px-8 bg-cover bg-no-repeat shadow-md hover:shadow-lg transition-shadow",
+        customClass,
+      )}>
+      {heading}
     </Link>
   );
 };
 
-export default DressStyleCard;
+export default StyleCard;
