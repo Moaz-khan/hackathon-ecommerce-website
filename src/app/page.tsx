@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+import BrowseByStyle from "./component/browsebystyle";
+import Hero from "./component/hero";
+import { NewArrival } from "./component/newArivals";
+import OurHappyCustomers from "./component/ourhappycostumer";
+import { TopSelling } from "./component/topSelling";
+=======
 import ProductListSec from "@/components/common/ProductListSec";
 import Brands from "@/components/homepage/Brands";
 import DressStyle from "@/components/homepage/DressStyle";
@@ -187,10 +194,18 @@ export const reviewsData: Review[] = [
   
   
 ]
+>>>>>>> origin/main
 
 export default function Home() {
   return (
     <div>
+<<<<<<< HEAD
+      <Hero />
+      <NewArrival />
+      <TopSelling />
+      <BrowseByStyle />
+      <OurHappyCustomers />
+=======
       <Header />
       <Brands />
       <main className="my-[50px] sm:my-[72px]">
@@ -214,6 +229,7 @@ export default function Home() {
         </div>
         <Reviews data={reviewsData} />
       </main>
+>>>>>>> origin/main
     </div>
   );
 }
